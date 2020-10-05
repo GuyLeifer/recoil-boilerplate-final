@@ -5,7 +5,8 @@ import { rectAtomFamily } from '../Atoms';
 
 function SideBarItem({ rectangleId }) {
 	const [rectAtom, setRectAtom] = useRecoilState(rectAtomFamily(rectangleId));
-
+	console.log("rectAtom: ", rectAtom)
+	
 	const handleWidthChange = ({ target: { value } }) => {
 		setRectAtom({ ...rectAtom, width: parseInt(value) });
 	};
