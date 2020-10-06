@@ -22,11 +22,11 @@ function SideBarItem({ rectangleId }) {
 			<span>{rectAtom.name}</span>
 			<span className="sidebarItemName"></span>
 			<label>width :</label>
-			<input id="shapeWidthInput" type="number" placeholder="width" min="0" onChange={handleWidthChange}/>
+			<input id="shapeWidthInput" type="number" placeholder="width" min="0" value={rectAtom.width} onChange={handleWidthChange}/>
 			<label>height :</label>
-			<input id="shapeHeightInput" type="number" placeholder="height" min="0" onChange={handleHeigthChange}/>
+			<input id="shapeHeightInput" type="number" placeholder="height" min="0" value={rectAtom.height} onChange={handleHeigthChange}/>
 			<label>color :</label>
-			<input type="color" id="colorModifier" onChange={handleColorChange}/>
+			<input type="color" id="colorModifier" value={rectAtom.color} onChange={handleColorChange}/>
 		</li>
 	);
 }
