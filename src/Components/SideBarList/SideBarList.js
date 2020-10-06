@@ -19,15 +19,13 @@ function SideBarList() {
 	console.log("rectanglesArray: ", rectanglesArray);
 
 	return (
-		<>
-			{counter === 1 ? "" : "" } 
-			{counter >= 2 ? <div>{(counter - 1) + " Trengles"} </div> : ""}
 			<ul className="sidebar__list">
+			{counter === 1 ? "" : "" } 
+			{counter >= 2 ? <div className="counter">{(counter - 1) + " Trengles"} </div> : ""}
 				{rectanglesArray.map((id) => 
 					<SideBarItem key={id} rectangleId={id} />
 				)}
 			</ul>
-		</>
 	);
 }
 
